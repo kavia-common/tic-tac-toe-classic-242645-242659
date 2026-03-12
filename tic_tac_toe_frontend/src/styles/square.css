@@ -1,0 +1,43 @@
+.square {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  border: 1px solid rgba(156, 163, 175, 0.55);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.86);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: transform 90ms ease, background 120ms ease, border-color 120ms ease;
+}
+
+.square:hover:not(:disabled) {
+  transform: translateY(-1px);
+  border-color: rgba(55, 65, 81, 0.55);
+  background: rgba(55, 65, 81, 0.04);
+}
+
+.square:disabled {
+  cursor: not-allowed;
+  opacity: 0.92;
+}
+
+.squareMark {
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--primary);
+}
+
+.markX {
+  color: var(--primary);
+}
+
+.markO {
+  color: var(--success);
+}
+
+.squareWinning {
+  border-color: rgba(22, 163, 74, 0.55);
+  background: rgba(22, 163, 74, 0.08);
+}
